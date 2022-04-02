@@ -50,4 +50,4 @@ app.add_url_rule(
 )
 
 
-# app.run(debug=True)
+app.run(debug=True)

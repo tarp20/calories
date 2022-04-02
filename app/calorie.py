@@ -16,7 +16,7 @@ class Calorie:
     def get_temperature(self):
         url = f"https://www.timeanddate.com/weather/{self.country}/{self.city}"
         text = requests.get(url).text
-        extractor = Extractor.from_yaml_file("temperature.yaml")
+        extractor = Extractor.from_yaml_file("app/tem.yaml")
         return int(extractor.extract(text)["temp"].replace("\xa0°C", "").strip())
 
     def calculate(self):
